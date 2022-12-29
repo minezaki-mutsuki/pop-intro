@@ -15,13 +15,13 @@ export const Basic = Template.bind({});
 Basic.args = {
   items: [
     {
-        title: "タイトル",
+        day: "日付",
         explanation: "説明",
     },{
-        title: "タイトル",
+        day: "日付",
         explanation: "説明",
     },{
-        title: "タイトル",
+        day: "日付",
         explanation: "説明",
     }
   ]

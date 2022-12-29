@@ -4,7 +4,7 @@ import { Title } from "../../uiParts/title";
 import { ButtonWrapper, Wrapper } from "./style";
 
 type EventsListItems = {
-    title: string;
+    day: string;
     explanation: string;
 }
 

@@ -1,7 +1,7 @@
 import { DayText, ExplanationText, ListWrapper, Wrapper } from "./style";
 
 type EventsListItems = {
-    title: string;
+    day: string;
     explanation: string;
 }
 
@@ -14,7 +14,7 @@ export const EventsList = ({ items }: EventsListProps) => {
         <ListWrapper>
             {items.map((item, index) => (
                 <Wrapper key={index}>
-                    <DayText>{item.title}</DayText>
+                    <DayText>{item.day}</DayText>
                     <ExplanationText>{item.explanation}</ExplanationText>
                 </Wrapper>
             ))}

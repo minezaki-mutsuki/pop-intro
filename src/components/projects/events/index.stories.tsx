@@ -14,13 +14,13 @@ const Template: ComponentStory<typeof Events> = (args) => (
 export const Basic = Template.bind({});
 Basic.args = {
   eventsList: [{
-    title: "2022.12.30",
+    day: "2022.12.30",
     explanation: "Aをした。",
   },{
-    title: "2022.12.30",
+    day: "2022.12.30",
     explanation: "Bをした。",
   },{
-    title: "2022.12.30",
+    day: "2022.12.30",
     explanation: "Cをした。",
   }],
 };
