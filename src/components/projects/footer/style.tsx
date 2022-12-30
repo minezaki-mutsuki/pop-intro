@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: grid;
     gap: 10px;
-    background-color: #f8f9fa;
+    background-color: black;
     border-top: solid 1px #e0e0e0;
 `;
 export const MenuWrapper = styled.div`
@@ -15,6 +15,7 @@ export const StyledMenu = styled.p`
     width: 50%;
     margin: 0;
     margin-bottom: 10px;
+    color: white;
     cursor: pointer;
 `;
 export const IconWrapper = styled.div`
@@ -30,6 +31,7 @@ export const FooterText = styled.p`
     font-size: 12px;
     color: white;
     text-align: center;
+    border-top: solid 1px white;
 `
 export const StyledLink = styled.a`
     cursor: pointer;

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const TitleText = styled.h2`
     font-size: 30px;
     line-height: 57px;
-    font-family: sans-serif;
+    font-family: serif;
     margin: 0 0 10px;
     color: #0E0841;
 `;

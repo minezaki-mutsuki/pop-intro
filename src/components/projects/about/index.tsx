@@ -1,7 +1,7 @@
 import { AboutList } from "../../uiParts/aboutList";
 import { Degree } from "../../uiParts/degree";
 import { Title } from "../../uiParts/title";
-import { DegreeWrapper, Wrapper } from "./style";
+import { DegreeWrapper, FlexWrapper, Wrapper } from "./style";
 
 type AboutListItems = {
     title: string;
@@ -25,11 +25,13 @@ export const About = ({ aboutList, degree }: AboutProps) => {
         <Wrapper>
             <Title title={"About"} />
             <AboutList items={aboutList} />
-            {degree.map((item, index) => (
-                <DegreeWrapper>
-                    <Degree key={index} {...item} />
-                </DegreeWrapper>
-            ))}
+            <FlexWrapper>
+                {degree.map((item, index) => (
+                    <DegreeWrapper>
+                        <Degree key={index} {...item} />
+                    </DegreeWrapper>
+                ))}
+            </FlexWrapper>
         </Wrapper>
     );
 }

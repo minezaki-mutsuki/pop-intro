@@ -23,6 +23,15 @@ Basic.args = {
     },{
         title: "タイトル",
         explanation: "説明",
-    }
+    },{
+      title: "タイトル",
+      explanation: "説明",
+  },{
+      title: "タイトル",
+      explanation: "説明",
+  },{
+      title: "タイトル",
+      explanation: "説明",
+  }
   ]
 };
