@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Footer } from "../../projects/footer";
 import { Header } from "../../projects/header";
 import { Button } from "../../uiParts/button";
-import { ButtonWrapper, LiveDay, Wrapper } from "./style";
+import { BodyWrapper, ButtonWrapper, LiveDay, Wrapper } from "./style";
 
 type LiveItems = {
     day: string;
@@ -23,7 +23,7 @@ export const LiveLayout = ({liveList}: LiveProps) => {
     return (
         <Wrapper>
             <Header choice={false} />
-            <div>
+            <BodyWrapper>
             {liveList.map((item, index) => (
                 <>
                 <LiveDay key={index}>{item.day}</LiveDay>                    
@@ -32,7 +32,7 @@ export const LiveLayout = ({liveList}: LiveProps) => {
                 </a>
                 </>
             ))}
-            </div>
+            </BodyWrapper>
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>

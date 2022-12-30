@@ -3,7 +3,7 @@ import { Footer } from "../../projects/footer";
 import { Header } from "../../projects/header";
 import { Button } from "../../uiParts/button";
 import { EventsList } from "../../uiParts/eventsList";
-import { ButtonWrapper, Wrapper } from "./style";
+import { BodyWrapper, ButtonWrapper, Wrapper } from "./style";
 
 type EventsListItems = {
     day: string;
@@ -23,7 +23,9 @@ export const EventsLayout = ({eventsList}: EventsProps) => {
     return (
         <Wrapper>
             <Header choice={false} />
-            <EventsList items={eventsList} />
+            <BodyWrapper>
+                <EventsList items={eventsList} />
+            </BodyWrapper>
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>
