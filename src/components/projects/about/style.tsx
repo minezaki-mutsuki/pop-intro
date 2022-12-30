@@ -7,3 +7,9 @@ export const Wrapper = styled.div`
 export const DegreeWrapper = styled.div`
     margin: auto;
 `;
+export const FlexWrapper = styled.div`
+    margin-top: 20px;
+    @media screen and (min-width: 900px) {
+        display: flex;
+    };
+`;
