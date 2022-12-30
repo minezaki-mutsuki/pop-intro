@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Footer } from "../../projects/footer";
 import { Header } from "../../projects/header";
 import { Button } from "../../uiParts/button";
@@ -14,14 +15,14 @@ type LiveProps = {
 }
 
 export const LiveLayout = ({liveList}: LiveProps) => {
+    const navigate = useNavigate();
     const onClickToTop = () => {
-        console.log("トップに遷移");
-        //TODO : useNavigate使いたい
+        navigate("/");
     };
 
     return (
         <Wrapper>
-            < Header/>
+            <Header choice={false} />
             <div>
             {liveList.map((item, index) => (
                 <>
@@ -35,7 +36,7 @@ export const LiveLayout = ({liveList}: LiveProps) => {
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>
-            <Footer />
+            <Footer choice={false} />
         </Wrapper>
     );
-}
+};

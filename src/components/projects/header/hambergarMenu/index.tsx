@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Sidebar } from "../sidebar";
 import { Container, Line, Menu, Wrapper, ButtonWrapper } from "./style";
 
-export const HamburgerMenu = () => {
+type HamburgerMenuProps = {
+  choice?: boolean;
+}
+
+export const HamburgerMenu = ({choice}: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +20,7 @@ export const HamburgerMenu = () => {
       </ButtonWrapper>
       <nav>
         <Menu isOpen={isOpen}>
-          <Sidebar />
+          <Sidebar choice={choice} />
         </Menu>
       </nav>
     </Wrapper>

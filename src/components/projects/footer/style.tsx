@@ -8,11 +8,12 @@ export const Wrapper = styled.div`
 `;
 export const MenuWrapper = styled.div`
     display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
     flex-wrap: wrap;
-    padding: 10px;
 `;
 export const StyledMenu = styled.p`
-    width: 50%;
     margin: 0;
     margin-bottom: 10px;
     color: white;
