@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `;
 export const TopText = styled.p`
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 400;
     color: white;
     text-align: center;
     margin: 0;
