@@ -4,7 +4,7 @@ export const LogoWrapper = styled.div`
     display: flex;
     gap: 10px;
     align-items: center;
-    width: 180px;
+    width: 250px;
     height: 60px;
     background-color: black;
     border-radius: 50px;
@@ -19,4 +19,4 @@ export const LogoTitle = styled.span`
     color: white;
     font-weight: 500;
     font-size: 23px;
-`
+`;
