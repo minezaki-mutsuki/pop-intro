@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../uiParts/button";
 import { QaButton } from "../../uiParts/qaButton";
 import { Title } from "../../uiParts/title";
@@ -13,9 +14,9 @@ type QandAProps = {
 }
 
 export const QandA = ({ QandA }: QandAProps) => {
+    const navigate = useNavigate();
     const onClickToQandA = () => {
-        console.log("Q&A一覧に遷移");
-        //TODO : useNavigate使いたい
+        navigate("/qanda");
     }
 
     return (

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Footer } from "../../projects/footer";
 import { Header } from "../../projects/header";
 import { Button } from "../../uiParts/button";
@@ -14,9 +15,9 @@ type QandAProps = {
 }
 
 export const QandALayout = ({qAndAList}: QandAProps) => {
+    const navigate = useNavigate();
     const onClickToTop = () => {
-        console.log("トップに遷移");
-        //TODO : useNavigate使いたい
+        navigate("/");
     };
 
     return (
