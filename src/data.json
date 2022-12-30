@@ -1,0 +1,74 @@
+{
+    "data": {
+        "top": {
+            "topText": "軽音POPは神楽坂、葛飾キャンパスを中心に活動している軽音サークルです！",
+            "aboutList": [{
+                "title": "活動日",
+                "explanation": "毎週日曜"
+              },{
+                "title": "部費",
+                "explanation": "半期5000円"
+              },{
+                "title": "活動場所",
+                "explanation": "葛飾キャンパス"
+              }],
+            "degree": [{
+                "title": "レベル感",
+                "left": "初心者",
+                "right": "上級者",
+                "degree": 2
+              },{
+                "title": "雰囲気",
+                "left": "和やか",
+                "right": "厳しめ",
+                "degree": 1
+              }],
+            "QandA": [{
+                "qestion": "まだ新歓の予定はありますか？",
+                "answer": "今のところ予定はないですが、公式LINEの方では随時質問を受け付けています！"
+              },{
+                "qestion": "現在でも対面の活動はしてないですか？",
+                "answer": "現在は週に一回、葛飾キャンパスにて対面で集まって練習をしています！"
+              },{
+                "qestion": "初心者でも大丈夫ですか？",
+                "answer": "初心者でも大丈夫です！"
+              },{
+                "qestion": "質問はどこからできますか",
+                "answer": "Twitterの質問箱からできます！（後々問い合わせフォームも作りたい）"
+              }],
+            "eventsList": [{
+                "day": "2022.12.17~18",
+                "explanation": "金町クリスマスマーケットにて演奏しました"
+              },{
+                "day": "2022.11.26~27",
+                "explanation": "神楽坂キャンパスにて理大祭ライブ"
+              },{
+                "day": "2022.10.2",
+                "explanation": "ミニライブ"
+              },{
+                "day": "2022.8.7",
+                "explanation": "夏ライブ"
+              },{
+                "day": "2022.5.1",
+                "explanation": "新歓ライブ"
+              }]
+        },
+        "live": [{
+            "day": "2022.11.26~27",
+            "link": "#",
+            "name": "理大祭ライブ（準備中）"
+          },{
+            "day": "2022.10.2",
+            "link": "https://www.youtube.com/playlist?list=PLwyggCmqNpoyn_iIAmV1ZhkxrZ1b3Px26",
+            "name": "ミニライブ"
+          },{
+            "day": "2022.8.26",
+            "link": "https://youtube.com/playlist?list=PLwyggCmqNpozUdQNODSuvDPAUSyr9NnP7",
+            "name": "合宿ライブ"
+          },{
+            "day": "2022.8.7",
+            "link": "https://youtube.com/playlist?list=PLwyggCmqNpowuqTdDTpcHZ7jVsrXlI6wF",
+            "name": "夏ライブ"
+          }]
+    }
+}
