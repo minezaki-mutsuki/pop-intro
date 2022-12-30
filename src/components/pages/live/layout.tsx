@@ -22,7 +22,7 @@ export const LiveLayout = ({liveList}: LiveProps) => {
 
     return (
         <Wrapper>
-            < Header/>
+            <Header choice={false} />
             <div>
             {liveList.map((item, index) => (
                 <>
@@ -36,7 +36,7 @@ export const LiveLayout = ({liveList}: LiveProps) => {
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>
-            <Footer />
+            <Footer choice={false} />
         </Wrapper>
     );
-}
+};

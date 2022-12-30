@@ -22,12 +22,12 @@ export const EventsLayout = ({eventsList}: EventsProps) => {
 
     return (
         <Wrapper>
-            < Header/>
+            <Header choice={false} />
             <EventsList items={eventsList} />
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>
-            <Footer />
+            <Footer choice={false} />
         </Wrapper>
     );
-}
+};

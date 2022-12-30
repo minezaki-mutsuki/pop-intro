@@ -14719,6 +14719,7 @@ __metadata:
     babel-plugin-named-exports-order: ^0.0.2
     prop-types: ^15.8.1
     react: ^18.2.0
+    react-anchor-link-smooth-scroll: ^1.0.12
     react-dom: ^18.2.0
     react-icons: ^4.6.0
     react-router-dom: ^6.6.1
@@ -16021,6 +16022,13 @@ __metadata:
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
   checksum: 51cc1b0d0e8c37c4336b5318f3b2c9c51d6998ad6f56ea09612afcfefc9c1f596341309e934a744ae907177f28efc9f1654eacd62151e82853fcc6d37450e795
+  languageName: node
+  linkType: hard
+
+"react-anchor-link-smooth-scroll@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "react-anchor-link-smooth-scroll@npm:1.0.12"
+  checksum: 7639941e3d80644676e11fb066efca822a89a220c31876b96aeeda2b2fb433061be3583e6f157922cf932b7c74d037d57f0fc30658d7f00b5437b8ac557ac480
   languageName: node
   linkType: hard
 

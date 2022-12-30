@@ -22,7 +22,7 @@ export const QandALayout = ({qAndAList}: QandAProps) => {
 
     return (
         <Wrapper>
-            <Header />
+            <Header choice={false} />
             <BodyWrapper>
                 {qAndAList.map((item, index) => (
                     <>                 
@@ -33,7 +33,7 @@ export const QandALayout = ({qAndAList}: QandAProps) => {
             <ButtonWrapper>
                 <Button text={"トップに戻る"} onClick={onClickToTop} />
             </ButtonWrapper>
-            <Footer />
+            <Footer choice={false} />
         </Wrapper>
     );
 }

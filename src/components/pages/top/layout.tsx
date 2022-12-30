@@ -42,14 +42,26 @@ export const TopLayout = ({ topProps, aboutListProps, degreeProps, eventsListPro
 
     return (
         <Wrapper>
-            <Header />
-            <Top text={topProps} />
-            <About aboutList={aboutListProps} degree={degreeProps} />
-            <Events eventsList={eventsListProps} />
-            <Live />
-            <QandA QandA={qandAProps} />
-            <Contact />
-            <Footer />
+            <Header choice={true} />
+            <section id="top">
+                <Top text={topProps} />
+            </section>
+            <section id="about">
+                <About aboutList={aboutListProps} degree={degreeProps} />
+            </section>
+            <section id="events">
+                <Events eventsList={eventsListProps} />
+            </section>
+            <section id="live">
+                <Live />
+            </section>
+            <section id="qanda">
+                <QandA QandA={qandAProps} />
+            </section>
+            <section id="contact">
+                <Contact />
+            </section>
+            <Footer choice={true} />
         </Wrapper>
     );
 }

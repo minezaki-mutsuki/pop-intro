@@ -1,18 +1,55 @@
 import { FooterText, IconWrapper, MenuWrapper, StyledLink, StyledMenu, Wrapper } from "./style";
 import { IconContext } from "react-icons"
 import {BsChatDotsFill, BsInstagram, BsTwitter } from "react-icons/bs"
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { useNavigate } from "react-router-dom";
 
-export const Footer = () => {
+type FooterProps = {
+    choice?: boolean;
+}
+
+export const Footer = ({choice}: FooterProps) => {
+
+    const TopMenu = (
+            <>    
+                <AnchorLink href="#top" style={{textDecoration: "none"}}>
+                    <StyledMenu>Top</StyledMenu>
+                </AnchorLink>
+                <AnchorLink href="#about" style={{textDecoration: "none"}}>
+                    <StyledMenu>About</StyledMenu>
+                </AnchorLink>
+                <AnchorLink href="#events" style={{textDecoration: "none"}}>
+                    <StyledMenu>Events</StyledMenu>
+                </AnchorLink>
+                <AnchorLink href="#live" style={{textDecoration: "none"}}>
+                    <StyledMenu>Live</StyledMenu>
+                </AnchorLink>
+                <AnchorLink href="#qanda" style={{textDecoration: "none"}}>
+                    <StyledMenu>Q&A</StyledMenu>
+                </AnchorLink>
+                <AnchorLink href="#contact" style={{textDecoration: "none"}}>
+                    <StyledMenu>Contact</StyledMenu>
+                </AnchorLink>
+            </>
+    );
+
+    const navigate = useNavigate();
+
+    const notTopMenu = (
+            <>    
+                <StyledMenu onClick={() => navigate("/")}>Top</StyledMenu>
+                <StyledMenu onClick={() => navigate("/")}>About</StyledMenu>
+                <StyledMenu onClick={() => navigate("/")}>Events</StyledMenu>
+                <StyledMenu onClick={() => navigate("/")}>Live</StyledMenu>
+                <StyledMenu onClick={() => navigate("/")}>Q&A</StyledMenu>
+                <StyledMenu onClick={() => navigate("/")}>Contact</StyledMenu>
+            </>
+    );
 
     return (
         <Wrapper>
             <MenuWrapper>
-                <StyledMenu>Top</StyledMenu>
-                <StyledMenu>About</StyledMenu>
-                <StyledMenu>Events</StyledMenu>
-                <StyledMenu>Live</StyledMenu>
-                <StyledMenu>Q&A</StyledMenu>
-                <StyledMenu>Contact</StyledMenu>
+                {choice ? TopMenu : notTopMenu}
             </MenuWrapper>
             <IconWrapper>
                 <StyledLink href="https://liff.line.me/1645278921-kWRPP32q/?accountId=132apjhn">

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: grid;
     gap: 10px;
+    padding: 0 30px;
 `;
 export const LiveText = styled.p`
     margin: 0;
