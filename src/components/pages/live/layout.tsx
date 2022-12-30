@@ -25,7 +25,8 @@ export const LiveLayout = ({liveList}: LiveProps) => {
             <div>
             {liveList.map((item, index) => (
                 <>
-                    <LiveDay key={index}>{item.day}</LiveDay>                    <a href={item.link}>
+                <LiveDay key={index}>{item.day}</LiveDay>                    
+                <a href={item.link}>
                     <Button text={item.name} onClick={() => console.log(item.link)} />
                 </a>
                 </>
