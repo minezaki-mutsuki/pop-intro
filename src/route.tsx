@@ -12,6 +12,7 @@ export const Router = () => {
                 <Route path="/events" element={<EventsPage />} />
                 <Route path="/live" element={<LivePage />} />
                 <Route path="/qanda" element={<QandAPage />} />
+                <Route path="*" element={<TopPage />} />
             </Routes>
         </BrowserRouter>
     );
