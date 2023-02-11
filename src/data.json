@@ -37,6 +37,9 @@
                 "answer": "Twitterの質問箱からできます！（後々問い合わせフォームも作りたい）"
               }],
             "eventsList": [{
+              "day": "2023.3.5",
+              "explanation": "ミニライブ"
+              },{
                 "day": "2022.12.17~18",
                 "explanation": "金町クリスマスマーケットにて演奏しました"
               },{
@@ -55,8 +58,8 @@
         },
         "live": [{
             "day": "2022.11.26~27",
-            "link": "#",
-            "name": "理大祭ライブ（準備中）"
+            "link": "https://youtube.com/playlist?list=PLwyggCmqNpox9_ZgIlAKituxwSfbTpl5-",
+            "name": "理大祭ライブ"
           },{
             "day": "2022.10.2",
             "link": "https://www.youtube.com/playlist?list=PLwyggCmqNpoyn_iIAmV1ZhkxrZ1b3Px26",

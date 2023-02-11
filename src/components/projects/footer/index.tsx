@@ -52,7 +52,7 @@ export const Footer = ({choice}: FooterProps) => {
                 {choice ? TopMenu : notTopMenu}
             </MenuWrapper>
             <IconWrapper>
-                <StyledLink href="https://liff.line.me/1645278921-kWRPP32q/?accountId=132apjhn">
+                <StyledLink href="https://line.me/R/ti/p/@892mfqno">
                     <IconContext.Provider value={{ color: "white", size: "20px" }}>
                         <BsChatDotsFill />
                     </IconContext.Provider>

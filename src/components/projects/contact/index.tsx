@@ -8,7 +8,7 @@ export const Contact = () => {
         <Wrapper>
             <Title title={"Contact"} />
             <ButtonWrapper>
-                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=132apjhn">
+                <a href="https://line.me/R/ti/p/@892mfqno">
                     <Button text={"公式LINE"} onClick={() => console.log("LINE")} />
                 </a>
                 <a href="https://instagram.com/k_on.pop?igshid=YmMyMTA2M2Y=">
