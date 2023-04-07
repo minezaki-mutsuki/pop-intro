@@ -24,10 +24,9 @@ export const QandALayout = () => {
 
   const [isPosted, setIsPosted] = useState(false);
   const [qestion, setQestion] = useState("");
-  const [answer, setAnswer] = useState(
-    "質問ありがとうございます。部員が回答するまでしばらくお待ちください。"
-  );
-  const postsCollectionRef = collection(db, "posts");
+  const answer =
+    "質問ありがとうございます。部員が回答するまでしばらくお待ちください。";
+
   const createPost = async () => {
     if (qestion === "") {
       setIsPosted(true);
@@ -35,6 +34,7 @@ export const QandALayout = () => {
         setIsPosted(false);
       }, 3000);
     } else {
+      const postsCollectionRef = collection(db, "posts");
       await addDoc(postsCollectionRef, {
         qestion,
         answer,
@@ -51,6 +51,7 @@ export const QandALayout = () => {
 
   useEffect(() => {
     const getPost = async () => {
+      const postsCollectionRef = collection(db, "posts");
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };

@@ -14,8 +14,8 @@ export const QandA = () => {
   };
 
   const [postList, setPostList] = useState([]);
-  const postsCollectionRef = collection(db, "posts");
   useEffect(() => {
+    const postsCollectionRef = collection(db, "posts");
     const getPost = async () => {
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));

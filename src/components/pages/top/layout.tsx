@@ -20,11 +20,6 @@ type DegreeItems = {
   degree: number;
 };
 
-type QandAItems = {
-  qestion: string;
-  answer: string;
-};
-
 type EventsListItems = {
   day: string;
   explanation: string;
