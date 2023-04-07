@@ -1,5 +1,5 @@
-https://pop-intro.netlify.app/ </br>
-netlifyでデプロイ
+https://pop-intro.vercel.app/ </br>
+vercelでデプロイ
 
 やったこと</br>
 ・useState、useEffect等reactの基本hooks復習</br>
