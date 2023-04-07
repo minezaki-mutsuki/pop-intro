@@ -7,7 +7,7 @@ import {
   StyledInput,
 } from "./style";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../../firebase-config";
+import { auth } from "https://pop-intro.netlify.app/src/firebase-config.js";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Header } from "../../projects/header";
 import { Footer } from "../../projects/footer";
