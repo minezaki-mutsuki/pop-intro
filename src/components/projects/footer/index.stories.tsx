@@ -7,8 +7,8 @@ export default {
   component: Footer,
 };
 
-const Template: ComponentStory<typeof Footer> = () => (
-  <Footer />
-);
+const Template: ComponentStory<typeof Footer> = () => {
+  return <Footer />;
+};
 
 export const Basic = Template.bind({});

@@ -7,8 +7,6 @@ export default {
   component: Sidebar,
 };
 
-const Template: ComponentStory<typeof Sidebar> = () => (
-  <Sidebar />
-);
+const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
 
 export const Basic = Template.bind({});

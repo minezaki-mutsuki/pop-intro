@@ -6,30 +6,30 @@ import { EventsList } from "../../uiParts/eventsList";
 import { BodyWrapper, ButtonWrapper, Wrapper } from "./style";
 
 type EventsListItems = {
-    day: string;
-    explanation: string;
-}
+  day: string;
+  explanation: string;
+};
 
 type EventsProps = {
-    eventsList: EventsListItems[];
-}
+  eventsList: EventsListItems[];
+};
 
-export const EventsLayout = ({eventsList}: EventsProps) => {
-    const navigate = useNavigate();
-    const onClickToTop = () => {
-        navigate("/");
-    };
+export const EventsLayout = ({ eventsList }: EventsProps) => {
+  const navigate = useNavigate();
+  const onClickToTop = () => {
+    navigate("/");
+  };
 
-    return (
-        <Wrapper>
-            <Header choice={false} />
-            <BodyWrapper>
-                <EventsList items={eventsList} />
-            </BodyWrapper>
-            <ButtonWrapper>
-                <Button text={"トップに戻る"} onClick={onClickToTop} />
-            </ButtonWrapper>
-            <Footer choice={false} />
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Header choice={false} />
+      <BodyWrapper>
+        <EventsList items={eventsList} />
+      </BodyWrapper>
+      <ButtonWrapper>
+        <Button text={"トップに戻る"} onClick={onClickToTop} />
+      </ButtonWrapper>
+      <Footer choice={false} />
+    </Wrapper>
+  );
 };

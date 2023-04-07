@@ -3,33 +3,42 @@ import { Button } from "../../uiParts/button";
 import { QaButton } from "../../uiParts/qaButton";
 import { Title } from "../../uiParts/title";
 import { ButtonWrapper, QandAWrapper, Wrapper } from "./style";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebase-config";
 
-type QandAItems = {
-    qestion: string;
-    answer: string;
-}
+export const QandA = () => {
+  const navigate = useNavigate();
+  const onClickToQandA = () => {
+    navigate("/qanda");
+  };
 
-type QandAProps = {
-    QandA: QandAItems[];
-}
+  const [postList, setPostList] = useState([]);
+  const postsCollectionRef = collection(db, "posts");
+  useEffect(() => {
+    const getPost = async () => {
+      const data = await getDocs(postsCollectionRef);
+      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getPost();
+  }, []);
 
-export const QandA = ({ QandA }: QandAProps) => {
-    const navigate = useNavigate();
-    const onClickToQandA = () => {
-        navigate("/qanda");
-    }
-
-    return (
-        <Wrapper>
-            <Title title={"Q&A"} />
-            <QandAWrapper>
-                {QandA.map((items, index) => (
-                    <QaButton key={index} {...items} />
-                ))}
-            </QandAWrapper>
-            <ButtonWrapper>
-                <Button text={"Q&A一覧"} onClick={onClickToQandA} />
-            </ButtonWrapper>
-        </Wrapper>
-    );
-}
+  return (
+    <Wrapper>
+      <Title title={"Q&A"} />
+      <QandAWrapper>
+        {postList.slice(0, 3).map((items, index) => (
+          <QaButton
+            key={index}
+            qestion={items.qestion}
+            answer={items.answer}
+            id={items.id}
+          />
+        ))}
+      </QandAWrapper>
+      <ButtonWrapper>
+        <Button text={"Q&A一覧"} onClick={onClickToQandA} />
+      </ButtonWrapper>
+    </Wrapper>
+  );
+};

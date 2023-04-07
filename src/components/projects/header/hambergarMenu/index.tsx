@@ -4,9 +4,9 @@ import { Container, Line, Menu, Wrapper, ButtonWrapper } from "./style";
 
 type HamburgerMenuProps = {
   choice?: boolean;
-}
+};
 
-export const HamburgerMenu = ({choice}: HamburgerMenuProps) => {
+export const HamburgerMenu = ({ choice }: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

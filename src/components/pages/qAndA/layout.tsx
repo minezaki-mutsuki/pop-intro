@@ -3,37 +3,91 @@ import { Footer } from "../../projects/footer";
 import { Header } from "../../projects/header";
 import { Button } from "../../uiParts/button";
 import { QaButton } from "../../uiParts/qaButton";
-import { BodyWrapper, ButtonWrapper, Wrapper } from "./style";
+import {
+  BodyWrapper,
+  ButtonWrapper,
+  ModalText,
+  PostButton,
+  PostWrapper,
+  StyledTextarea,
+  Wrapper,
+} from "./style";
+import { useEffect, useState } from "react";
+import { addDoc, collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebase-config";
 
-type QandAItems = {
-    qestion: string;
-    answer: string;
-}
+export const QandALayout = () => {
+  const navigate = useNavigate();
+  const onClickToTop = () => {
+    navigate("/");
+  };
 
-type QandAProps = {
-    qAndAList: QandAItems[];
-}
+  const [isPosted, setIsPosted] = useState(false);
+  const [qestion, setQestion] = useState("");
+  const [answer, setAnswer] = useState(
+    "質問ありがとうございます。部員が回答するまでしばらくお待ちください。"
+  );
+  const postsCollectionRef = collection(db, "posts");
+  const createPost = async () => {
+    if (qestion === "") {
+      setIsPosted(true);
+      setTimeout(() => {
+        setIsPosted(false);
+      }, 3000);
+    } else {
+      await addDoc(postsCollectionRef, {
+        qestion,
+        answer,
+      });
+      window.location.reload();
+      setIsPosted(true);
+      setTimeout(() => {
+        setIsPosted(false);
+      }, 3000);
+    }
+  };
 
-export const QandALayout = ({qAndAList}: QandAProps) => {
-    const navigate = useNavigate();
-    const onClickToTop = () => {
-        navigate("/");
+  const [postList, setPostList] = useState([]);
+
+  useEffect(() => {
+    const getPost = async () => {
+      const data = await getDocs(postsCollectionRef);
+      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
+    getPost();
+  }, []);
 
-    return (
-        <Wrapper>
-            <Header choice={false} />
-            <BodyWrapper>
-                {qAndAList.map((item, index) => (
-                    <>                 
-                        <QaButton key={index} qestion={item.qestion} answer={item.answer} />
-                    </>
-                ))}
-            </BodyWrapper>
-            <ButtonWrapper>
-                <Button text={"トップに戻る"} onClick={onClickToTop} />
-            </ButtonWrapper>
-            <Footer choice={false} />
-        </Wrapper>
-    );
-}
+  return (
+    <Wrapper>
+      <Header choice={false} />
+      <BodyWrapper>
+        {postList.map((item) => (
+          <>
+            <QaButton
+              key={item.id}
+              qestion={item.qestion}
+              answer={item.answer}
+              id={item.id}
+            />
+          </>
+        ))}
+      </BodyWrapper>
+      <PostWrapper>
+        <StyledTextarea
+          placeholder="質問を記入して送信ボタンを押してください"
+          onChange={(e) => setQestion(e.target.value)}
+        />
+        <PostButton onClick={createPost}>送信</PostButton>
+        {isPosted && (
+          <ModalText>
+            {qestion === "" ? "質問を入力してください" : "正常に送信されました"}
+          </ModalText>
+        )}
+      </PostWrapper>
+      <ButtonWrapper>
+        <Button text={"トップに戻る"} onClick={onClickToTop} />
+      </ButtonWrapper>
+      <Footer choice={false} />
+    </Wrapper>
+  );
+};
