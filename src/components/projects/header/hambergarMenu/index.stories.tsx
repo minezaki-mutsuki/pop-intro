@@ -7,8 +7,6 @@ export default {
   component: HamburgerMenu,
 };
 
-const Template: ComponentStory<typeof HamburgerMenu> = () => (
-  <HamburgerMenu />
-);
+const Template: ComponentStory<typeof HamburgerMenu> = () => <HamburgerMenu />;
 
 export const Basic = Template.bind({});

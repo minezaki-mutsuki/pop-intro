@@ -13,5 +13,8 @@ export const ButtonWrapper = styled.div`
 export const BodyWrapper = styled.div`
   display: grid;
   gap: 30px;
-  padding: 30px;
+  @media screen and (min-width: 650px) {
+    padding: 30px;
+  }
+  padding: 90px 30px;
 `;

@@ -1,10 +1,8 @@
-import Data from "../../../data.json"
+import Data from "../../../data.json";
 import { QandALayout } from "./layout";
 
 export const QandAPage = () => {
-    const QandA = Data.data.top.QandA;
+  const QandA = Data.data.top.QandA;
 
-    return (
-        <QandALayout qAndAList={QandA} />
-    );
+  return <QandALayout qAndAList={QandA} />;
 };

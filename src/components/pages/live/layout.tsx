@@ -5,38 +5,38 @@ import { Button } from "../../uiParts/button";
 import { BodyWrapper, ButtonWrapper, LiveDay, Wrapper } from "./style";
 
 type LiveItems = {
-    day: string;
-    link: string;
-    name: string;
-}
+  day: string;
+  link: string;
+  name: string;
+};
 
 type LiveProps = {
-    liveList: LiveItems[];
-}
+  liveList: LiveItems[];
+};
 
-export const LiveLayout = ({liveList}: LiveProps) => {
-    const navigate = useNavigate();
-    const onClickToTop = () => {
-        navigate("/");
-    };
+export const LiveLayout = ({ liveList }: LiveProps) => {
+  const navigate = useNavigate();
+  const onClickToTop = () => {
+    navigate("/");
+  };
 
-    return (
-        <Wrapper>
-            <Header choice={false} />
-            <BodyWrapper>
-            {liveList.map((item, index) => (
-                <>
-                <LiveDay key={index}>{item.day}</LiveDay>                    
-                <a href={item.link}>
-                    <Button text={item.name} onClick={() => console.log(item.link)} />
-                </a>
-                </>
-            ))}
-            </BodyWrapper>
-            <ButtonWrapper>
-                <Button text={"トップに戻る"} onClick={onClickToTop} />
-            </ButtonWrapper>
-            <Footer choice={false} />
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Header choice={false} />
+      <BodyWrapper>
+        {liveList.map((item, index) => (
+          <>
+            <LiveDay key={index}>{item.day}</LiveDay>
+            <a href={item.link}>
+              <Button text={item.name} onClick={() => console.log(item.link)} />
+            </a>
+          </>
+        ))}
+      </BodyWrapper>
+      <ButtonWrapper>
+        <Button text={"トップに戻る"} onClick={onClickToTop} />
+      </ButtonWrapper>
+      <Footer choice={false} />
+    </Wrapper>
+  );
 };

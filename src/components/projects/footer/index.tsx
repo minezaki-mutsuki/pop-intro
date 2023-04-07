@@ -10,14 +10,25 @@ import { IconContext } from "react-icons";
 import { BsChatDotsFill, BsInstagram, BsTwitter } from "react-icons/bs";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../../firebase-config";
+import { useCurrentUser } from "../../../useCurrentUser";
 
 type FooterProps = {
   choice?: boolean;
 };
 
 export const Footer = ({ choice }: FooterProps) => {
+  const navigate = useNavigate();
+  const user = useCurrentUser();
+  const onLogout = () => {
+    auth.signOut();
+    navigate("/");
+  };
   const TopMenu = (
     <>
+      <StyledMenu onClick={() => (user ? onLogout() : navigate("/login"))}>
+        {user ? "Logout" : "Login"}
+      </StyledMenu>
       <AnchorLink href="#top" style={{ textDecoration: "none" }}>
         <StyledMenu>Top</StyledMenu>
       </AnchorLink>
@@ -39,10 +50,11 @@ export const Footer = ({ choice }: FooterProps) => {
     </>
   );
 
-  const navigate = useNavigate();
-
   const notTopMenu = (
     <>
+      <StyledMenu onClick={() => (user ? onLogout() : navigate("/login"))}>
+        {user ? "Logout" : "Login"}
+      </StyledMenu>
       <StyledMenu onClick={() => navigate("/")}>Top</StyledMenu>
       <StyledMenu onClick={() => navigate("/")}>About</StyledMenu>
       <StyledMenu onClick={() => navigate("/")}>Events</StyledMenu>

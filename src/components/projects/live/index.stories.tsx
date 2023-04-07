@@ -7,8 +7,6 @@ export default {
   component: Live,
 };
 
-const Template: ComponentStory<typeof Live> = () => (
-  <Live />
-);
+const Template: ComponentStory<typeof Live> = () => <Live />;
 
 export const Basic = Template.bind({});

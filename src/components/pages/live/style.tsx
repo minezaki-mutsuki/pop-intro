@@ -11,7 +11,10 @@ export const ButtonWrapper = styled.div`
   padding: 0 30px;
 `;
 export const BodyWrapper = styled.div`
-  padding: 30px;
+  @media screen and (min-width: 650px) {
+    padding: 30px;
+  }
+  padding: 90px 30px;
 `;
 export const LiveDay = styled.p`
   margin: 20px 0 10px;
