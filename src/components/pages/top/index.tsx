@@ -6,10 +6,8 @@ export const TopPage = () => {
   const aboutList = Data.data.top.aboutList;
   const degree = Data.data.top.degree;
   const eventsList = Data.data.top.eventsList;
-  const QandA = Data.data.top.QandA;
 
   const newEventsList = eventsList.slice(0, 3);
-  const newQandA = QandA.slice(0, 3);
 
   return (
     <TopLayout
@@ -17,7 +15,6 @@ export const TopPage = () => {
       aboutListProps={aboutList}
       degreeProps={degree}
       eventsListProps={newEventsList}
-      qandAProps={newQandA}
     />
   );
 };

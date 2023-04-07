@@ -7,29 +7,34 @@ export default {
   component: QandALayout,
 };
 
-const Template: ComponentStory<typeof QandALayout> = (args) => (
-  <QandALayout {...args} />
-);
+const Template: ComponentStory<typeof QandALayout> = (args) => <QandALayout />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  qAndAList: [{
-    qestion: "質問文A",
-    answer: "回答文A",
-  },{
-    qestion: "質問文B",
-    answer: "回答文B",
-  },{
-    qestion: "質問文C",
-    answer: "回答文C",
-  },{
-    qestion: "質問文A",
-    answer: "回答文A",
-  },{
-    qestion: "質問文B",
-    answer: "回答文B",
-  },{
-    qestion: "質問文C",
-    answer: "回答文C",
-  },]
+  qAndAList: [
+    {
+      qestion: "質問文A",
+      answer: "回答文A",
+    },
+    {
+      qestion: "質問文B",
+      answer: "回答文B",
+    },
+    {
+      qestion: "質問文C",
+      answer: "回答文C",
+    },
+    {
+      qestion: "質問文A",
+      answer: "回答文A",
+    },
+    {
+      qestion: "質問文B",
+      answer: "回答文B",
+    },
+    {
+      qestion: "質問文C",
+      answer: "回答文C",
+    },
+  ],
 };

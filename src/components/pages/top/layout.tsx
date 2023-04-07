@@ -35,7 +35,6 @@ type TopLayoutProps = {
   aboutListProps: AboutListItems[];
   degreeProps: DegreeItems[];
   eventsListProps: EventsListItems[];
-  qandAProps: QandAItems[];
 };
 
 export const TopLayout = ({
@@ -43,7 +42,6 @@ export const TopLayout = ({
   aboutListProps,
   degreeProps,
   eventsListProps,
-  qandAProps,
 }: TopLayoutProps) => {
   return (
     <Wrapper>
@@ -61,7 +59,7 @@ export const TopLayout = ({
         <Live />
       </section>
       <section id="qanda">
-        <QandA QandA={qandAProps} />
+        <QandA />
       </section>
       <section id="contact">
         <Contact />
