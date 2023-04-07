@@ -5,7 +5,7 @@ import { Title } from "../../uiParts/title";
 import { ButtonWrapper, QandAWrapper, Wrapper } from "./style";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { db } from "../../../firebase-config";
 
 export const QandA = () => {
   const navigate = useNavigate();

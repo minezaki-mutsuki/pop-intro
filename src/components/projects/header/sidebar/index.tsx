@@ -1,7 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useNavigate } from "react-router-dom";
 import { MenuText, Wrapper } from "./style";
-import { auth } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { auth } from "../../../../firebase-config";
 import { useCurrentUser } from "../../../../useCurrentUser";
 
 type SidebarProps = {

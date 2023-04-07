@@ -10,7 +10,7 @@ import { IconContext } from "react-icons";
 import { BsChatDotsFill, BsInstagram, BsTwitter } from "react-icons/bs";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useNavigate } from "react-router-dom";
-import { auth } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { auth } from "../../../firebase-config";
 import { useCurrentUser } from "../../../useCurrentUser";
 
 type FooterProps = {

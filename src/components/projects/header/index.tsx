@@ -3,7 +3,7 @@ import { Button } from "../../uiParts/button";
 import { Logo } from "../../uiParts/logo";
 import { HamburgerMenu } from "./hambergarMenu";
 import { ButtonWrapper, Wrapper } from "./style";
-import { auth } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { auth } from "../../../firebase-config";
 import { useCurrentUser } from "../../../useCurrentUser";
 
 type HeaderProps = {

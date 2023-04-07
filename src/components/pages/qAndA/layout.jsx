@@ -14,7 +14,7 @@ import {
 } from "./style";
 import { useEffect, useState } from "react";
 import { addDoc, collection, getDocs } from "firebase/firestore";
-import { db } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { db } from "../../../firebase-config";
 
 export const QandALayout = () => {
   const navigate = useNavigate();

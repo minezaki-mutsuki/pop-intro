@@ -14,7 +14,7 @@ import { IconContext } from "react-icons";
 import { TfiAngleUp, TfiAngleDown } from "react-icons/tfi";
 import { useCurrentUser } from "../../../useCurrentUser";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
-import { db } from "https://pop-intro.netlify.app/src/firebase-config.js";
+import { db } from "../../../firebase-config";
 
 type QaButtonProps = {
   qestion: string;
