@@ -7,20 +7,6 @@ export default {
   component: QandA,
 };
 
-const Template: ComponentStory<typeof QandA> = (args) => (
-  <QandA {...args} />
-);
+const Template: ComponentStory<typeof QandA> = () => <QandA />;
 
 export const Basic = Template.bind({});
-Basic.args = {
-  QandA: [{
-    qestion: "質問文A",
-    answer: "回答文A",
-  },{
-    qestion: "質問文B",
-    answer: "回答文B",
-  },{
-    qestion: "質問文C",
-    answer: "回答文C",
-  }],
-};

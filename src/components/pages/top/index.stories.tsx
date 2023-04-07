@@ -56,18 +56,4 @@ Basic.args = {
       degree: 1,
     },
   ],
-  qandAProps: [
-    {
-      qestion: "質問文A",
-      answer: "回答文A",
-    },
-    {
-      qestion: "質問文B",
-      answer: "回答文B",
-    },
-    {
-      qestion: "質問文C",
-      answer: "回答文C",
-    },
-  ],
 };
