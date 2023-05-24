@@ -7,3 +7,4 @@ vercelでデプロイ
 ・react-routerでルーティング</br>
 ・画面スクロール</br>
 ・JSONファイルからデータ取得と表示</br>
+・Firebaseでデータベースと紐づける、認証設定
