@@ -7,4 +7,11 @@ vercelでデプロイ
 ・react-routerでルーティング</br>
 ・画面スクロール</br>
 ・JSONファイルからデータ取得と表示</br>
-・Firebaseでデータベースと紐づける、認証設定
+・Firebaseでデータベースと紐づける</br>
+・認証機能の実装</br>
+・storybookの利用</br>
+
+今後の展望</br>
+・Next.jsに移行しアーキテクチャをSSRに移行</br>
+・SWRやメモ化によるパフォーマンスの改善</br>
+・Googleアナリティクスでインプレッション計測</br>
